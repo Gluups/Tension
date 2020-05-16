@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace Tension
 {
-	[DefaultBindingProperty("strValues")]
 	public partial class ctlUneTension : UserControl
 	{
 		public int sys;
