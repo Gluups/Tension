@@ -13,6 +13,8 @@ namespace Tension
 {
 	public partial class Form1 : Form
 	{
+		// Commentaire 1
+
 		string strTension1 = "";
 		string strTension2 = "";
 		string strTension3 = "";
