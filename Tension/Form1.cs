@@ -50,6 +50,10 @@ namespace Tension
 					uj.soir1 = tension4;
 					uj.soir2 = tension5;
 					uj.soir3 = tension6;
+					this.dateTimePicker1.Value = DateTime.Parse(ujt.LaDate);
+					uj.annee = dateTimePicker1.Value.Year;
+					uj.mois = dateTimePicker1.Value.Month;
+					uj.jour = dateTimePicker1.Value.Month;
 					LJ.Add(uj);
 					ctlUneTension1.import(tension1.sys.ToString() + ";" + tension1.dia.ToString() + ";" + tension1.pul.ToString());
 					ctlUneTension2.import(tension2.sys.ToString() + ";" + tension2.dia.ToString() + ";" + tension2.pul.ToString());
