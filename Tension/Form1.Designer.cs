@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.dataSet11 = new Tension.DataSet1();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.lblMatin1 = new System.Windows.Forms.Label();
@@ -36,13 +37,16 @@
 			this.lblSoir1 = new System.Windows.Forms.Label();
 			this.lblSoir2 = new System.Windows.Forms.Label();
 			this.lblSoir3 = new System.Windows.Forms.Label();
+			this.btnOK = new System.Windows.Forms.Button();
+			this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+			this.txbRec = new System.Windows.Forms.TextBox();
 			this.ctlUneTension3 = new Tension.ctlUneTension();
 			this.ctlUneTension2 = new Tension.ctlUneTension();
 			this.ctlUneTension1 = new Tension.ctlUneTension();
 			this.ctlUneTension6 = new Tension.ctlUneTension();
 			this.ctlUneTension5 = new Tension.ctlUneTension();
 			this.ctlUneTension4 = new Tension.ctlUneTension();
-			this.btnOK = new System.Windows.Forms.Button();
+			this.btnAjout = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -125,6 +129,37 @@
 			this.lblSoir3.TabIndex = 11;
 			this.lblSoir3.Text = "Soir 3";
 			// 
+			// btnOK
+			// 
+			this.btnOK.Location = new System.Drawing.Point(1097, 12);
+			this.btnOK.Name = "btnOK";
+			this.btnOK.Size = new System.Drawing.Size(75, 28);
+			this.btnOK.TabIndex = 13;
+			this.btnOK.Text = "OK";
+			this.btnOK.UseVisualStyleBackColor = true;
+			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+			// 
+			// hScrollBar1
+			// 
+			this.hScrollBar1.CausesValidation = false;
+			this.hScrollBar1.LargeChange = 1;
+			this.hScrollBar1.Location = new System.Drawing.Point(12, 595);
+			this.hScrollBar1.Maximum = 2;
+			this.hScrollBar1.Minimum = 1;
+			this.hScrollBar1.Name = "hScrollBar1";
+			this.hScrollBar1.Size = new System.Drawing.Size(937, 26);
+			this.hScrollBar1.TabIndex = 14;
+			this.hScrollBar1.Value = 1;
+			this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
+			// 
+			// txbRec
+			// 
+			this.txbRec.Location = new System.Drawing.Point(328, 624);
+			this.txbRec.Name = "txbRec";
+			this.txbRec.Size = new System.Drawing.Size(100, 35);
+			this.txbRec.TabIndex = 15;
+			this.txbRec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
 			// ctlUneTension3
 			// 
 			this.ctlUneTension3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -181,15 +216,16 @@
 			this.ctlUneTension4.Size = new System.Drawing.Size(303, 187);
 			this.ctlUneTension4.TabIndex = 8;
 			// 
-			// btnOK
+			// btnAjout
 			// 
-			this.btnOK.Location = new System.Drawing.Point(1097, 12);
-			this.btnOK.Name = "btnOK";
-			this.btnOK.Size = new System.Drawing.Size(75, 28);
-			this.btnOK.TabIndex = 13;
-			this.btnOK.Text = "OK";
-			this.btnOK.UseVisualStyleBackColor = true;
-			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+			this.btnAjout.Image = ((System.Drawing.Image)(resources.GetObject("btnAjout.Image")));
+			this.btnAjout.Location = new System.Drawing.Point(1034, 235);
+			this.btnAjout.Name = "btnAjout";
+			this.btnAjout.Size = new System.Drawing.Size(127, 98);
+			this.btnAjout.TabIndex = 16;
+			this.btnAjout.Text = "Nouveau";
+			this.btnAjout.UseVisualStyleBackColor = true;
+			this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
 			// 
 			// Form1
 			// 
@@ -197,6 +233,9 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1184, 660);
+			this.Controls.Add(this.btnAjout);
+			this.Controls.Add(this.txbRec);
+			this.Controls.Add(this.hScrollBar1);
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.ctlUneTension3);
 			this.Controls.Add(this.ctlUneTension2);
@@ -239,6 +278,9 @@
 		private ctlUneTension ctlUneTension2;
 		private ctlUneTension ctlUneTension3;
 		private System.Windows.Forms.Button btnOK;
+		private System.Windows.Forms.HScrollBar hScrollBar1;
+		private System.Windows.Forms.TextBox txbRec;
+		private System.Windows.Forms.Button btnAjout;
 	}
 }
 

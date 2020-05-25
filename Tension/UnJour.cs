@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,19 @@ namespace Tension
 {
 	public class UnJour
 	{
+		public UnJour()
+		{
+			matin1 = new UneTension();
+			matin2 = new UneTension();
+			matin3 = new UneTension();
+			soir1 = new UneTension();
+			soir2 = new UneTension();
+			soir3 = new UneTension();
+			jour = DateTime.Now.Day;
+			mois = DateTime.Now.Month;
+			annee = DateTime.Now.Year;
+		}
+
 		public int Id { get; set; }
 
 		public int annee { get; set; }

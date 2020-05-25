@@ -16,6 +16,7 @@ namespace Tension
 		public int dia;
 		public int pul;
 		public string strValues=";;";
+		private string strOldValues = ";;";
 
 		public ctlUneTension()
 		{
@@ -41,8 +42,10 @@ namespace Tension
 
 		}
 
-		private void export()
+		public void export()
 		{
+			string strName = this.Name;
+			strOldValues = strValues;
 			strValues = sys.ToString() + ";" + dia.ToString() + ";" + pul.ToString();
 		}
 
